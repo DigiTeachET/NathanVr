@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Nathan Gozo's Virtual Insanity</title>
+<script src="https://aframe.io/releases/1.5.0/aframe.min.js"></script> 
+    <script src="https://unpkg.com/aframe-environment-component/dist/aframe-environment-component.min.js"></script>
+</head>
+<!-- This is the main body of the website- ALL your content goes AFTER the <body> tag and before the /body/ tag -->
+<body>
+    <!--enviromnent-->
+<a-scene>
+    <a-assets>
+       <img id="floor" src="images/blossom.jpg" title="image by Daria-Yakovleva from pixabay" prelaod="auto">
+        <img id="wall" src="images/wall.jpg" title="image by Michael_Laut from pixabay" prelaod="auto">
+        <img id="art1" src="images/catinmoon.jpg" title=" Image by RebeccaAnneCain from Pixabay "preload="auto">
+        <img id="art3" src="images/TV.png" title=" Image by Pikurā from Pixabay "preload="auto">
+        <img id="art2" src="images/deer.jpg" title=" Image by Denys Marchuk from Pixabay "preload="auto">
+        <img id="door1" src="images/door.jpg.png" title=" Image by Dũng Quách from Pixabay " preload="auto">
+    </a-assets>
+    <a-entity environment= "preset:contact; dressingAmount:23;skyColor:#B8336A"></a-entity>
+   <!-- Museum floor starts here -->
+    <a-cylinder id="floor" position="0 0 0" radius="7.5" src="#floor" height="0.1"></a-cylinder>
+
+    <a-box id="wall1" position="0 1.473 4.907" rotation="0 0 0" scale="10 3 0.2" src="#wall"></a-box>
+    <a-box id="wall2" position="0 1.473 -4.907" rotation="0 0 0" scale="10 3 0.2" src="#wall"></a-box>
+    <a-box id="wall3" position="5.049 1.454 -0.008" rotation="0 -90 0" scale="10 3 0.2" src="#wall"></a-box>
+    <a-box id="wall4" position="-5.049 1.454 -0.008" rotation="0 -90 0" scale="10 3 0.2" src="#wall"></a-box>
+    <a-box id="door1" position="0.074 1.419 5.117" rotation="0 0 0" scale="1.333 2.983 0.430" color="brown"></a-box>
+
+    <!--Roof-->
+    <a-cylinder id="triangle_front" segments-radial="3" position="0 3.874 4.907" rotation="-90 0 0" scale="5.774 0.2 1.8" color="brown"></a-cylinder>
+    <a-cylinder id="triangle_back" segments-radial="3" position="0 3.874 -4.907" rotation="-90 0 0" scale="5.774 0.2 1.8" color="brown"></a-cylinder>
+    <a-box id="roof_right" position="2.580 4.328 0" rotation="28.433 90 0" scale="10.931 0.20 6.110" color="brown"></a-box>
+    <a-box id="roof_left" position="-2.599 4.321 -0.017" rotation="28.433 -90 0" scale="10.931 0.20 6.130" color="brown"></a-box>
+
+    <!-- ART -->
+    <a-plane id="art1" src="#art1" scale="2 2 0.05" rotation="0 0 0" position="1.762 1.934 -4.792"></a-plane>
+    <a-plane id="art2" src="#art2" scale="2 2 0.05" rotation="0 0 0" position="-2.162 1.934 -4.792"></a-plane>
+    <a-plane id="art3" src="#art3" scale="2 2 0.05" rotation="0 0 0" position="-0.162 1.934 -4.792"></a-plane>
+
+</a-scene>
+</body>
+</html>
